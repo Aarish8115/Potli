@@ -3,850 +3,1799 @@
 import "../../styles/global.css";
 import HomeMenu from "../../components/HomeMenu.astro";
 import Footer from "../../components/Footer/Footer.astro";
-import {ArrowRight} from "@lucide/astro";
+import { ArrowRight } from "@lucide/astro";
 ---
 
 <!doctype html>
-<!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-43WGNKHHN4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-43WGNKHHN4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-43WGNKHHN4');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Career — Potli</title>
-<meta name="description" content="Potli is hiring across strategy, design, and technology. Explore open roles and what it's like to build brands with a small, senior team.">
-<meta name="description" content="Join Potli. We're a small firm building brand experiences for the world's most discerning clients.">
-<link rel="icon" type="image/svg+xml" href="/assets/9.png" />
-<meta property="og:type" content="website">
-<meta property="og:title" content="Career — Potli">
-<meta property="og:description" content="Join Potli. We're a small firm building brand experiences for the world's most discerning clients.">
-<meta property="og:image" content="https://potli.world/assets/potli-og.png">
-<meta property="og:url" content="https://potli-sage.vercel.app/career">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Career — Potli">
-<meta name="twitter:description" content="Join Potli. We're a small firm building brand experiences for the world's most discerning clients.">
-<meta name="twitter:image" content="https://potli.world/assets/potli-og.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<style is:global>
-  :root{
-    --cream:#F7F2EA;
-    --cream-deep:#F1E9DB;
-    --taupe:#E7DBC7;
-    --ink:#221E1A;
-    --ink-soft:#5C544B;
-    --ink-faint:#8A8074;
-    --accent:#9C6B4F;
-    --accent-deep:#7A4F39;
-    --line: rgba(34,30,26,0.12);
-    --line-soft: rgba(34,30,26,0.07);
-    --ease: cubic-bezier(.16,.84,.32,1);
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--cream);
-    color:var(--ink);
-    font-family:'Instrument Sans', sans-serif;
-    font-weight:400;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  ::selection{background:var(--accent);color:var(--cream);}
+      gtag("config", "G-43WGNKHHN4");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career — Potli</title>
+    <meta
+      name="description"
+      content="Potli is hiring across strategy, design, and technology. Explore open roles and what it's like to build brands with a small, senior team."
+    />
+    <meta
+      name="description"
+      content="Join Potli. We're a small firm building brand experiences for the world's most discerning clients."
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/9.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Career — Potli" />
+    <meta
+      property="og:description"
+      content="Join Potli. We're a small firm building brand experiences for the world's most discerning clients."
+    />
+    <meta
+      property="og:image"
+      content="https://potli.world/assets/potli-og.png"
+    />
+    <meta property="og:url" content="https://potli-sage.vercel.app/career" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Career — Potli" />
+    <meta
+      name="twitter:description"
+      content="Join Potli. We're a small firm building brand experiences for the world's most discerning clients."
+    />
+    <meta
+      name="twitter:image"
+      content="https://potli.world/assets/potli-og.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style is:global>
+      :root {
+        --cream: #f7f2ea;
+        --cream-deep: #f1e9db;
+        --taupe: #e7dbc7;
+        --ink: #221e1a;
+        --ink-soft: #5c544b;
+        --ink-faint: #8a8074;
+        --accent: #9c6b4f;
+        --accent-deep: #7a4f39;
+        --line: rgba(34, 30, 26, 0.12);
+        --line-soft: rgba(34, 30, 26, 0.07);
+        --ease: cubic-bezier(0.16, 0.84, 0.32, 1);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--cream);
+        color: var(--ink);
+        font-family: "Instrument Sans", sans-serif;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      ::selection {
+        background: var(--accent);
+        color: var(--cream);
+      }
 
-  .display{font-family:'Fraunces', serif; font-optical-sizing:auto;}
-  .eyebrow{
-    font-size:11px; letter-spacing:.22em; text-transform:uppercase;
-    color:var(--accent-deep); font-weight:600; display:flex; align-items:center; gap:10px;
-  }
-  .eyebrow::before{content:''; width:16px; height:1px; background:var(--accent-deep); display:inline-block;}
+      .display {
+        font-family: "Fraunces", serif;
+        font-optical-sizing: auto;
+      }
+      .eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--accent-deep);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 16px;
+        height: 1px;
+        background: var(--accent-deep);
+        display: inline-block;
+      }
 
-  a{color:inherit; text-decoration:none;}
-  .wrap{max-width:1180px; margin:0 auto; padding:0 40px;}
-  @media(max-width:720px){ .wrap{padding:0 22px;} }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+      @media (max-width: 720px) {
+        .wrap {
+          padding: 0 22px;
+        }
+      }
 
-  /* NAV */
-  nav.floater{
-    position:fixed; top:22px; left:0; right:0; z-index:100;
-    display:flex; justify-content:center; pointer-events:none;
-  }
-  .nav-pill{
-    pointer-events:all;
-    display:flex; align-items:center; gap:38px;
-    background:rgba(247,242,234,0.78);
-    backdrop-filter: blur(18px) saturate(140%);
-    -webkit-backdrop-filter: blur(18px) saturate(140%);
-    border:1px solid var(--line);
-    border-radius:100px;
-    padding:11px 14px 11px 22px;
-    box-shadow: 0 10px 30px -12px rgba(34,30,26,0.18);
-    transition: box-shadow .5s var(--ease);
-  }
-  .nav-logo{font-family:'Fraunces', serif; font-size:16px; font-weight:600; letter-spacing:.01em;}
-  .nav-links{display:flex; gap:30px; font-size:13px; color:var(--ink-soft);}
-  .nav-links a{position:relative; padding:2px 0; transition:color .3s var(--ease);}
-  .nav-links a:hover{color:var(--ink);}
-  .nav-links a.current{color:var(--ink); font-weight:500;}
-  .nav-links a.current::after{
-    content:''; position:absolute; left:0; right:0; bottom:-4px; height:1px; background:var(--accent-deep);
-  }
-  .nav-cta{
-    font-size:12.5px; font-weight:500; background:var(--ink); color:var(--cream);
-    padding:9px 18px; border-radius:100px; white-space:nowrap;
-    transition: transform .45s var(--ease), background .3s var(--ease);
-  }
-  .nav-cta:hover{background:var(--accent-deep); transform:translateY(-1px);}
-  @media(max-width:820px){ .nav-links{display:none;} .nav-pill{gap:18px;} }
+      /* NAV */
+      nav.floater {
+        position: fixed;
+        top: 22px;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        pointer-events: none;
+      }
+      .nav-pill {
+        pointer-events: all;
+        display: flex;
+        align-items: center;
+        gap: 38px;
+        background: rgba(247, 242, 234, 0.78);
+        backdrop-filter: blur(18px) saturate(140%);
+        -webkit-backdrop-filter: blur(18px) saturate(140%);
+        border: 1px solid var(--line);
+        border-radius: 100px;
+        padding: 11px 14px 11px 22px;
+        box-shadow: 0 10px 30px -12px rgba(34, 30, 26, 0.18);
+        transition: box-shadow 0.5s var(--ease);
+      }
+      .nav-logo {
+        font-family: "Fraunces", serif;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+      }
+      .nav-links {
+        display: flex;
+        gap: 30px;
+        font-size: 13px;
+        color: var(--ink-soft);
+      }
+      .nav-links a {
+        position: relative;
+        padding: 2px 0;
+        transition: color 0.3s var(--ease);
+      }
+      .nav-links a:hover {
+        color: var(--ink);
+      }
+      .nav-links a.current {
+        color: var(--ink);
+        font-weight: 500;
+      }
+      .nav-links a.current::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -4px;
+        height: 1px;
+        background: var(--accent-deep);
+      }
+      .nav-cta {
+        font-size: 12.5px;
+        font-weight: 500;
+        background: var(--ink);
+        color: var(--cream);
+        padding: 9px 18px;
+        border-radius: 100px;
+        white-space: nowrap;
+        transition:
+          transform 0.45s var(--ease),
+          background 0.3s var(--ease);
+      }
+      .nav-cta:hover {
+        background: var(--accent-deep);
+        transform: translateY(-1px);
+      }
+      @media (max-width: 820px) {
+        .nav-links {
+          display: none;
+        }
+        .nav-pill {
+          gap: 18px;
+        }
+      }
 
-  /* HERO */
-  header.hero{
-    position:relative;
-    min-height:100vh;
-    display:flex; flex-direction:column; justify-content:center;
-    padding:140px 0 90px;
-    overflow:hidden;
-  }
-  .hero-noise{
-    position:absolute; inset:0; z-index:0; opacity:.35; pointer-events:none;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-    mix-blend-mode:multiply;
-  }
-  .hero-orb{
-    position:absolute; z-index:0; border-radius:50%;
-    background: radial-gradient(circle at 35% 35%, rgba(156,107,79,0.28), rgba(156,107,79,0) 70%);
-    width:640px; height:640px; top:-220px; right:-180px;
-    filter:blur(10px);
-  }
-  .hero-inner{position:relative; z-index:1;}
-  .hero-tags{
-    display:flex; gap:10px; flex-wrap:wrap; margin-bottom:34px;
-  }
-  .hero-tag{
-    font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft);
-    border:1px solid var(--line); padding:6px 14px; border-radius:100px;
-  }
-  h1.hero-title{
-    font-size:clamp(42px, 7.2vw, 96px);
-    font-weight:400; line-height:1.02; letter-spacing:-0.015em;
-    max-width:960px;
-  }
-  h1.hero-title em{
-    font-style:italic; font-weight:400; color:var(--accent-deep);
-  }
-  .hero-sub{
-    margin-top:30px; max-width:520px; font-size:17px; line-height:1.65; color:var(--ink-soft);
-  }
-  .hero-actions{margin-top:44px; display:flex; align-items:center; gap:26px; flex-wrap:wrap;}
-  .btn-primary{
-    display:inline-flex; align-items:center; gap:10px;
-    background:var(--ink); color:var(--cream); font-size:14px; font-weight:500;
-    padding:15px 15px 15px 26px; border-radius:100px;
-    transition: transform .5s var(--ease), background .35s var(--ease);
-  }
-  .btn-primary .ico{
-    width:32px; height:32px; border-radius:50%; background:rgba(247,242,234,0.16);
-    display:flex; align-items:center; justify-content:center; font-size:14px;
-    transition: transform .5s var(--ease);
-  }
-  .btn-primary:hover{background:var(--accent-deep); transform:translateY(-2px);}
-  .btn-primary:hover .ico{transform:translate(3px,-3px);}
-  .link-underline{
-    font-size:14px; font-weight:500; color:var(--ink); border-bottom:1px solid var(--ink);
-    padding-bottom:2px; transition: color .3s, border-color .3s;
-  }
-  .link-underline:hover{color:var(--accent-deep); border-color:var(--accent-deep);}
+      /* HERO */
+      header.hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 140px 0 90px;
+        overflow: hidden;
+      }
+      .hero-noise {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        opacity: 0.35;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+        mix-blend-mode: multiply;
+      }
+      .hero-orb {
+        position: absolute;
+        z-index: 0;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 35% 35%,
+          rgba(156, 107, 79, 0.28),
+          rgba(156, 107, 79, 0) 70%
+        );
+        width: 640px;
+        height: 640px;
+        top: -220px;
+        right: -180px;
+        filter: blur(10px);
+      }
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+      }
+      .hero-tags {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 34px;
+      }
+      .hero-tag {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        border: 1px solid var(--line);
+        padding: 6px 14px;
+        border-radius: 100px;
+      }
+      h1.hero-title {
+        font-size: clamp(42px, 7.2vw, 96px);
+        font-weight: 400;
+        line-height: 1.02;
+        letter-spacing: -0.015em;
+        max-width: 960px;
+      }
+      h1.hero-title em {
+        font-style: italic;
+        font-weight: 400;
+        color: var(--accent-deep);
+      }
+      .hero-sub {
+        margin-top: 30px;
+        max-width: 520px;
+        font-size: 17px;
+        line-height: 1.65;
+        color: var(--ink-soft);
+      }
+      .hero-actions {
+        margin-top: 44px;
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--ink);
+        color: var(--cream);
+        font-size: 14px;
+        font-weight: 500;
+        padding: 15px 15px 15px 26px;
+        border-radius: 100px;
+        transition:
+          transform 0.5s var(--ease),
+          background 0.35s var(--ease);
+      }
+      .btn-primary .ico {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: rgba(247, 242, 234, 0.16);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        transition: transform 0.5s var(--ease);
+      }
+      .btn-primary:hover {
+        background: var(--accent-deep);
+        transform: translateY(-2px);
+      }
+      .btn-primary:hover .ico {
+        transform: translate(3px, -3px);
+      }
+      .link-underline {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--ink);
+        border-bottom: 1px solid var(--ink);
+        padding-bottom: 2px;
+        transition:
+          color 0.3s,
+          border-color 0.3s;
+      }
+      .link-underline:hover {
+        color: var(--accent-deep);
+        border-color: var(--accent-deep);
+      }
 
-  .hero-stats{
-    margin-top:100px; display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
-    background:var(--line); border:1px solid var(--line); border-radius:20px; overflow:hidden;
-  }
-  .stat{background:var(--cream); padding:26px 24px;}
-  .stat .num{font-family:'Fraunces',serif; font-size:30px;}
-  .stat .lbl{font-size:12px; color:var(--ink-soft); margin-top:6px; line-height:1.4;}
-  @media(max-width:640px){ .hero-stats{grid-template-columns:1fr;} }
+      .hero-stats {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .stat {
+        background: var(--cream);
+        padding: 26px 24px;
+      }
+      .stat .num {
+        font-family: "Fraunces", serif;
+        font-size: 30px;
+      }
+      .stat .lbl {
+        font-size: 12px;
+        color: var(--ink-soft);
+        margin-top: 6px;
+        line-height: 1.4;
+      }
+      @media (max-width: 640px) {
+        .hero-stats {
+          grid-template-columns: 1fr;
+        }
+      }
 
-  /* SECTION SHARED */
-  section{padding:110px 0; position:relative;}
-  .sec-head{max-width:640px; margin-bottom:64px;}
-  .sec-head h2{font-size:clamp(30px,4vw,46px); font-weight:400; line-height:1.12; margin-top:18px; letter-spacing:-.01em;}
-  .sec-head p{margin-top:18px; color:var(--ink-soft); font-size:16px; line-height:1.65; max-width:520px;}
-  .rule{border-top:1px solid var(--line);}
+      /* SECTION SHARED */
+      section {
+        padding: 110px 0;
+        position: relative;
+      }
+      .sec-head {
+        max-width: 640px;
+        margin-bottom: 64px;
+      }
+      .sec-head h2 {
+        font-size: clamp(30px, 4vw, 46px);
+        font-weight: 400;
+        line-height: 1.12;
+        margin-top: 18px;
+        letter-spacing: -0.01em;
+      }
+      .sec-head p {
+        margin-top: 18px;
+        color: var(--ink-soft);
+        font-size: 16px;
+        line-height: 1.65;
+        max-width: 520px;
+      }
+      .rule {
+        border-top: 1px solid var(--line);
+      }
 
-  /* MODEL / HOW WE WORK */
-  .model-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:22px; overflow:hidden;}
-  .model-card{background:var(--cream); padding:38px 30px; transition:background .4s var(--ease);}
-  .model-card:hover{background:var(--cream-deep);}
-  .model-card .mk{font-family:'Fraunces',serif; font-style:italic; font-size:13px; color:var(--accent-deep); margin-bottom:26px; display:block;}
-  .model-card h3{font-family:'Fraunces',serif; font-size:21px; font-weight:500; margin-bottom:12px;}
-  .model-card p{font-size:14px; line-height:1.6; color:var(--ink-soft);}
-  @media(max-width:900px){ .model-grid{grid-template-columns:repeat(2,1fr);} }
-  @media(max-width:560px){ .model-grid{grid-template-columns:1fr;} }
-  #model .model-grid .model-card:nth-child(7){ grid-column: 1 / -1; }
+      /* MODEL / HOW WE WORK */
+      .model-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        overflow: hidden;
+      }
+      .model-card {
+        background: var(--cream);
+        padding: 38px 30px;
+        transition: background 0.4s var(--ease);
+      }
+      .model-card:hover {
+        background: var(--cream-deep);
+      }
+      .model-card .mk {
+        font-family: "Fraunces", serif;
+        font-style: italic;
+        font-size: 13px;
+        color: var(--accent-deep);
+        margin-bottom: 26px;
+        display: block;
+      }
+      .model-card h3 {
+        font-family: "Fraunces", serif;
+        font-size: 21px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+      .model-card p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--ink-soft);
+      }
+      @media (max-width: 900px) {
+        .model-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 560px) {
+        .model-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      #model .model-grid .model-card:nth-child(7) {
+        grid-column: 1 / -1;
+      }
 
-  /* VALUES */
-  .values-list{display:flex; flex-direction:column;}
-  .value-row{
-    display:grid; grid-template-columns:90px 1fr 1.3fr; gap:40px; align-items:start;
-    padding:38px 0; border-top:1px solid var(--line);
-  }
-  .value-row:last-child{border-bottom:1px solid var(--line);}
-  .value-row .vi{font-family:'Fraunces',serif; font-style:italic; font-size:15px; color:var(--ink-faint);}
-  .value-row h3{font-family:'Fraunces',serif; font-size:24px; font-weight:500;}
-  .value-row p{font-size:15px; line-height:1.65; color:var(--ink-soft);}
-  @media(max-width:720px){
-    .value-row{grid-template-columns:1fr; gap:10px; padding:26px 0;}
-  }
+      /* VALUES */
+      .values-list {
+        display: flex;
+        flex-direction: column;
+      }
+      .value-row {
+        display: grid;
+        grid-template-columns: 90px 1fr 1.3fr;
+        gap: 40px;
+        align-items: start;
+        padding: 38px 0;
+        border-top: 1px solid var(--line);
+      }
+      .value-row:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      .value-row .vi {
+        font-family: "Fraunces", serif;
+        font-style: italic;
+        font-size: 15px;
+        color: var(--ink-faint);
+      }
+      .value-row h3 {
+        font-family: "Fraunces", serif;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .value-row p {
+        font-size: 15px;
+        line-height: 1.65;
+        color: var(--ink-soft);
+      }
+      @media (max-width: 720px) {
+        .value-row {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          padding: 26px 0;
+        }
+      }
 
-  /* ROLES */
-  .roles-list{display:flex; flex-direction:column; border-top:1px solid var(--line);}
-  .role{
-    display:grid; grid-template-columns:1.1fr 1.6fr auto; gap:30px; align-items:center;
-    padding:32px 6px; border-bottom:1px solid var(--line);
-    transition: padding-left .5s var(--ease), background .4s var(--ease);
-  }
-  .role:hover{padding-left:20px; background:var(--cream-deep);}
-  .role h3{font-family:'Fraunces',serif; font-weight:500; font-size:22px;}
-  .role .meta{display:flex; gap:10px; margin-top:10px; flex-wrap:wrap;}
-  .role .tag{font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); border:1px solid var(--line); padding:5px 11px; border-radius:100px;}
-  .role p{font-size:14.5px; color:var(--ink-soft); line-height:1.6;}
-  .role-apply{
-    justify-self:end; font-size:13px; font-weight:500; color:var(--ink);
-    display:flex; align-items:center; gap:8px; white-space:nowrap;
-    background:none; border:none; cursor:pointer; font-family:'Instrument Sans', sans-serif;
-  }
-  .role-apply .arrow{transition:transform .4s var(--ease);}
-  .role:hover .role-apply .arrow{transform:translateX(4px);}
-  @media(max-width:820px){
-    .role{grid-template-columns:1fr; gap:14px;}
-    .role-apply{justify-self:start;}
-  }
+      /* ROLES */
+      .roles-list {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid var(--line);
+      }
+      .role {
+        display: grid;
+        grid-template-columns: 1.1fr 1.6fr auto;
+        gap: 30px;
+        align-items: center;
+        padding: 32px 6px;
+        border-bottom: 1px solid var(--line);
+        transition:
+          padding-left 0.5s var(--ease),
+          background 0.4s var(--ease);
+      }
+      .role:hover {
+        padding-left: 20px;
+        background: var(--cream-deep);
+      }
+      .role h3 {
+        font-family: "Fraunces", serif;
+        font-weight: 500;
+        font-size: 22px;
+      }
+      .role .meta {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+      .role .tag {
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        border: 1px solid var(--line);
+        padding: 5px 11px;
+        border-radius: 100px;
+      }
+      .role p {
+        font-size: 14.5px;
+        color: var(--ink-soft);
+        line-height: 1.6;
+      }
+      .role-apply {
+        justify-self: end;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        white-space: nowrap;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: "Instrument Sans", sans-serif;
+      }
+      .role-apply .arrow {
+        transition: transform 0.4s var(--ease);
+      }
+      .role:hover .role-apply .arrow {
+        transform: translateX(4px);
+      }
+      @media (max-width: 820px) {
+        .role {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+        .role-apply {
+          justify-self: start;
+        }
+      }
 
-  /* APPLICATION FORM */
-  #apply-form{scroll-margin-top:110px;}
-  .form-shell{max-width:760px; margin:0 auto; background:var(--cream-deep); border:1px solid var(--line); border-radius:24px; padding:48px;}
-  @media(max-width:640px){ .form-shell{padding:30px 22px; border-radius:18px;} }
-  form.app-form{display:flex; flex-direction:column; gap:24px;}
-  .row2{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
-  @media(max-width:560px){ .row2{grid-template-columns:1fr;} }
-  .field{position:relative; display:flex; flex-direction:column;}
-  .field label{font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:9px;}
-  .field .opt{text-transform:none; letter-spacing:0; opacity:.7;}
-  .field input, .field select, .field textarea{
-    background:var(--cream); border:1px solid var(--line); border-radius:10px; color:var(--ink);
-    font-family:'Instrument Sans', sans-serif; font-size:15.5px; padding:13px 14px;
-    transition:border-color .3s var(--ease), box-shadow .3s var(--ease);
-  }
-  .field select{
-    appearance:none; -webkit-appearance:none;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235C544B' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat:no-repeat; background-position:right 14px center; cursor:pointer; padding-right:36px;
-  }
-  .field textarea{resize:vertical; min-height:100px; line-height:1.6;}
-  .field input::placeholder, .field textarea::placeholder{color:var(--ink-faint);}
-  .field input:focus, .field select:focus, .field textarea:focus{
-    outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgba(156,107,79,0.14);
-  }
-  .file-drop{
-    border:1px dashed var(--line); border-radius:10px; padding:16px 14px; background:var(--cream);
-    font-size:14px; color:var(--ink-soft); display:flex; align-items:center; justify-content:space-between; gap:12px;
-    cursor:pointer; transition:border-color .3s var(--ease);
-  }
-  .file-drop:hover{border-color:var(--accent);}
-  .file-drop .fname{color:var(--ink); font-weight:500;}
-  #app-resume{
-    position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
-    clip:rect(0,0,0,0); white-space:nowrap; border:0;
-  }
-  .file-hint{font-size:12px; color:var(--ink-faint); margin-top:8px;}
-  .submit-row{margin-top:4px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;}
-  .app-form .btn-primary{border:none; cursor:pointer;}
-  .app-form .btn-primary:disabled{opacity:.6; cursor:not-allowed;}
-  .form-note{font-size:13px; color:var(--ink-soft);}
-  .status-msg{
-    display:none; align-items:center; gap:14px; padding:16px 20px; background:var(--cream);
-    border:1px solid var(--line); border-radius:12px; font-size:14px; color:var(--ink);
-  }
-  .status-msg.show{display:flex;}
-  .status-msg .dot{width:7px; height:7px; border-radius:50%; background:var(--accent-deep); flex-shrink:0;}
-  .status-msg.error .dot{background:#B0503A;}
-  .status-msg.error{border-color:rgba(176,80,58,0.35);}
+      /* APPLICATION FORM */
+      #apply-form {
+        scroll-margin-top: 110px;
+      }
+      .form-shell {
+        max-width: 760px;
+        margin: 0 auto;
+        background: var(--cream-deep);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 48px;
+      }
+      @media (max-width: 640px) {
+        .form-shell {
+          padding: 30px 22px;
+          border-radius: 18px;
+        }
+      }
+      form.app-form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .row2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      @media (max-width: 560px) {
+        .row2 {
+          grid-template-columns: 1fr;
+        }
+      }
+      .field {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+      .field label {
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 9px;
+      }
+      .field .opt {
+        text-transform: none;
+        letter-spacing: 0;
+        opacity: 0.7;
+      }
+      .field input,
+      .field select,
+      .field textarea {
+        background: var(--cream);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        color: var(--ink);
+        font-family: "Instrument Sans", sans-serif;
+        font-size: 15.5px;
+        padding: 13px 14px;
+        transition:
+          border-color 0.3s var(--ease),
+          box-shadow 0.3s var(--ease);
+      }
+      .field select {
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235C544B' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+        cursor: pointer;
+        padding-right: 36px;
+      }
+      .field textarea {
+        resize: vertical;
+        min-height: 100px;
+        line-height: 1.6;
+      }
+      .field input::placeholder,
+      .field textarea::placeholder {
+        color: var(--ink-faint);
+      }
+      .field input:focus,
+      .field select:focus,
+      .field textarea:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(156, 107, 79, 0.14);
+      }
+      .file-drop {
+        border: 1px dashed var(--line);
+        border-radius: 10px;
+        padding: 16px 14px;
+        background: var(--cream);
+        font-size: 14px;
+        color: var(--ink-soft);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        cursor: pointer;
+        transition: border-color 0.3s var(--ease);
+      }
+      .file-drop:hover {
+        border-color: var(--accent);
+      }
+      .file-drop .fname {
+        color: var(--ink);
+        font-weight: 500;
+      }
+      #app-resume {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .file-hint {
+        font-size: 12px;
+        color: var(--ink-faint);
+        margin-top: 8px;
+      }
+      .submit-row {
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .app-form .btn-primary {
+        border: none;
+        cursor: pointer;
+      }
+      .app-form .btn-primary:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      .form-note {
+        font-size: 13px;
+        color: var(--ink-soft);
+      }
+      .status-msg {
+        display: none;
+        align-items: center;
+        gap: 14px;
+        padding: 16px 20px;
+        background: var(--cream);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        font-size: 14px;
+        color: var(--ink);
+      }
+      .status-msg.show {
+        display: flex;
+      }
+      .status-msg .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent-deep);
+        flex-shrink: 0;
+      }
+      .status-msg.error .dot {
+        background: #b0503a;
+      }
+      .status-msg.error {
+        border-color: rgba(176, 80, 58, 0.35);
+      }
 
-  /* PERKS */
-  .perks-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:22px; overflow:hidden;}
-  .perk{background:var(--cream); padding:34px 28px 40px;}
-  .perk .pnum{font-size:11px; color:var(--ink-faint); letter-spacing:.1em;}
-  .perk h3{font-family:'Fraunces',serif; font-weight:500; font-size:19px; margin:16px 0 10px;}
-  .perk p{font-size:14px; color:var(--ink-soft); line-height:1.6;}
-  @media(max-width:820px){ .perks-grid{grid-template-columns:1fr;} }
+      /* PERKS */
+      .perks-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        overflow: hidden;
+      }
+      .perk {
+        background: var(--cream);
+        padding: 34px 28px 40px;
+      }
+      .perk .pnum {
+        font-size: 11px;
+        color: var(--ink-faint);
+        letter-spacing: 0.1em;
+      }
+      .perk h3 {
+        font-family: "Fraunces", serif;
+        font-weight: 500;
+        font-size: 19px;
+        margin: 16px 0 10px;
+      }
+      .perk p {
+        font-size: 14px;
+        color: var(--ink-soft);
+        line-height: 1.6;
+      }
+      @media (max-width: 820px) {
+        .perks-grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-  /* FAQ */
-  .faq-item{border-top:1px solid var(--line); padding:26px 0;}
-  .faq-item:last-child{border-bottom:1px solid var(--line);}
-  .faq-q{
-    display:flex; justify-content:space-between; align-items:center; cursor:pointer; gap:20px;
-  }
-  .faq-q h4{font-family:'Fraunces',serif; font-weight:500; font-size:18px; font-weight:400;}
-  .faq-plus{font-size:20px; color:var(--accent-deep); transition:transform .4s var(--ease); flex-shrink:0;}
-  .faq-item.open .faq-plus{transform:rotate(45deg);}
-  .faq-a{
-    max-height:0; overflow:hidden; transition:max-height .5s var(--ease), padding-top .5s var(--ease);
-  }
-  .faq-item.open .faq-a{max-height:200px; padding-top:16px;}
-  .faq-a p{font-size:14.5px; line-height:1.7; color:var(--ink-soft); max-width:640px;}
+      /* FAQ */
+      .faq-item {
+        border-top: 1px solid var(--line);
+        padding: 26px 0;
+      }
+      .faq-item:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      .faq-q {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        gap: 20px;
+      }
+      .faq-q h4 {
+        font-family: "Fraunces", serif;
+        font-weight: 500;
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .faq-plus {
+        font-size: 20px;
+        color: var(--accent-deep);
+        transition: transform 0.4s var(--ease);
+        flex-shrink: 0;
+      }
+      .faq-item.open .faq-plus {
+        transform: rotate(45deg);
+      }
+      .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.5s var(--ease),
+          padding-top 0.5s var(--ease);
+      }
+      .faq-item.open .faq-a {
+        max-height: 200px;
+        padding-top: 16px;
+      }
+      .faq-a p {
+        font-size: 14.5px;
+        line-height: 1.7;
+        color: var(--ink-soft);
+        max-width: 640px;
+      }
 
-  /* CTA FOOTER */
-  .cta-band{
-    background:var(--ink); color:var(--cream); border-radius:32px; margin:0 auto;
-    padding:90px 60px; text-align:center; position:relative; overflow:hidden;
-  }
-  .cta-band .eyebrow{color:#C9A98C;}
-  .cta-band .eyebrow::before{background:#C9A98C;}
-  .cta-band h2{font-family:'Fraunces',serif; font-size:clamp(32px,5vw,58px); font-weight:400; margin:22px auto 34px; max-width:720px; line-height:1.1;}
-  .cta-band .btn-primary{background:var(--cream); color:var(--ink);}
-  .cta-band .btn-primary .ico{background:rgba(34,30,26,0.08); color:var(--ink);}
-  .cta-band .btn-primary:hover{background:#C9A98C;}
-  @media(max-width:720px){ .cta-band{padding:60px 26px; border-radius:22px;} }
+      /* CTA FOOTER */
+      .cta-band {
+        background: var(--ink);
+        color: var(--cream);
+        border-radius: 32px;
+        margin: 0 auto;
+        padding: 90px 60px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-band .eyebrow {
+        color: #c9a98c;
+      }
+      .cta-band .eyebrow::before {
+        background: #c9a98c;
+      }
+      .cta-band h2 {
+        font-family: "Fraunces", serif;
+        font-size: clamp(32px, 5vw, 58px);
+        font-weight: 400;
+        margin: 22px auto 34px;
+        max-width: 720px;
+        line-height: 1.1;
+      }
+      .cta-band .btn-primary {
+        background: var(--cream);
+        color: var(--ink);
+      }
+      .cta-band .btn-primary .ico {
+        background: rgba(34, 30, 26, 0.08);
+        color: var(--ink);
+      }
+      .cta-band .btn-primary:hover {
+        background: #c9a98c;
+      }
+      @media (max-width: 720px) {
+        .cta-band {
+          padding: 60px 26px;
+          border-radius: 22px;
+        }
+      }
 
-  footer{padding:60px 0 40px;}
-  .foot-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; font-size:13px; color:var(--ink-soft);}
-  .foot-links{display:flex; gap:26px;}
-  .foot-links a:hover{color:var(--ink);}
+      footer {
+        padding: 60px 0 40px;
+      }
+      .foot-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 13px;
+        color: var(--ink-soft);
+      }
+      .foot-links {
+        display: flex;
+        gap: 26px;
+      }
+      .foot-links a:hover {
+        color: var(--ink);
+      }
 
-  /* reveal */
-  .reveal{opacity:0; transform:translateY(26px); transition:opacity .9s var(--ease), transform .9s var(--ease);}
-  .reveal.in{opacity:1; transform:translateY(0);}
+      /* reveal */
+      .reveal {
+        opacity: 0;
+        transform: translateY(26px);
+        transition:
+          opacity 0.9s var(--ease),
+          transform 0.9s var(--ease);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-  @media (prefers-reduced-motion: reduce){
-    *{transition:none !important; scroll-behavior:auto !important;}
-    .reveal{opacity:1; transform:none;}
-  }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
 
-  a:focus-visible, .faq-q:focus-visible{outline:2px solid var(--accent-deep); outline-offset:3px; border-radius:4px;}
-</style>
-</head>
-<body>
-<img
-  id="mouse-follower"
-  src="/assets/logo-mouse-follower.png"
-  alt="Potli Logo"
-  class="z-[999] w-5 h-5 fixed top-0 left-0 pointer-events-none md:block hidden"
-/>
+      a:focus-visible,
+      .faq-q:focus-visible {
+        outline: 2px solid var(--accent-deep);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="mouse-follower"
+      src="/assets/logo-mouse-follower.png"
+      alt="Potli Logo"
+      class="z-[999] w-5 h-5 fixed top-0 left-0 pointer-events-none md:block hidden"
+    />
 
-<HomeMenu />
+    <HomeMenu />
 
-
-<header class="hero">
-  <div class="hero-noise"></div>
-  <div class="hero-orb"></div>
-  <div class="wrap hero-inner">
-    <div class="hero-tags reveal">
-      <span class="hero-tag">New Delhi · Hybrid</span>
-      <span class="hero-tag">Project-based collaborations</span>
-      <span class="hero-tag">Currently accepting applications</span>
-    </div>
-    <h1 class="display hero-title reveal">Build brands<br>the future <em>will remember.</em></h1>
-    <p class="hero-sub reveal">Potli is a small firm of seven, working across strategy, design, technology and business — each project chosen deliberately, each collaborator trusted completely. We're looking for people who'd rather do fewer things exceptionally well.</p>
-    <div class="hero-actions reveal">
-      <a href="#roles" class="btn-primary">See open roles <span class="ico">↓</span></a>
-      <a href="mailto:careers@potli.world" class="link-underline">Or write to us directly</a>
-    </div>
-
-    <div class="hero-stats reveal">
-      <div class="stat"><div class="num display">20+</div><div class="lbl">Brands transformed</div></div>
-      <div class="stat"><div class="num display">7</div><div class="lbl">Collaborators on the core team</div></div>
-      <div class="stat"><div class="num display">7</div><div class="lbl">Disciplines under one roof</div></div>
-    </div>
-  </div>
-</header>
-
-<section id="model">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">How we work</span>
-      <h2 class="display">A firm, not a headcount.</h2>
-      <p>We don't hire to fill seats. Potli runs as a tight, project-based collaborative — every person owns a discipline outright, and every engagement is chosen because it's worth doing properly.</p>
-    </div>
-    <div class="model-grid reveal" style="grid-template-columns:repeat(3,1fr);">
-      <div class="model-card">
-        <span class="mk">01 — Strategy</span>
-        <h3>Brand Strategy &amp; Positioning</h3>
-        <p>The narrative and market thinking that sits underneath every decision a brand makes.</p>
-      </div>
-      <div class="model-card">
-        <span class="mk">02 — Design</span>
-        <h3>Visual Identity</h3>
-        <p>Logos, systems and the visual language that gives a strategy a shape people recognise.</p>
-      </div>
-      <div class="model-card">
-        <span class="mk">03 — Messaging</span>
-        <h3>Content &amp; Copywriting</h3>
-        <p>Tone of voice, brand messaging and the words that carry an identity beyond its visuals.</p>
-      </div>
-      <div class="model-card">
-        <span class="mk">04 — Digital</span>
-        <h3>Web &amp; Experience</h3>
-        <p>Acquisition-ready websites and digital experiences, built with the same precision as the identity itself.</p>
-      </div>
-      <div class="model-card">
-        <span class="mk">05 — Business</span>
-        <h3>Growth &amp; Client Partnership</h3>
-        <p>Bringing in the right clients and building relationships that outlast a single project.</p>
-      </div>
-      <div class="model-card">
-        <span class="mk">06 — Operations</span>
-        <h3>Delivery &amp; Coordination</h3>
-        <p>Keeping every engagement precise, on time, and worthy of the Potli name.</p>
-      </div>
-      <div class="model-card">
-        <span class="mk">07 — Sales &amp; Marketing</span>
-        <h3>Campaigns &amp; Outreach</h3>
-        <p>Campaigns, outreach and the pipeline work that turns interest into signed, well-fit clients.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="values" style="background:var(--cream-deep);">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Life inside Potli</span>
-      <h2 class="display">What it actually feels like to work here.</h2>
-    </div>
-    <div class="values-list reveal">
-      <div class="value-row">
-        <span class="vi">i.</span>
-        <h3>Ownership over instruction</h3>
-        <p>There's no bench. Every collaborator leads their discipline end-to-end — you'll be trusted with real client relationships, not tucked behind a senior's sign-off.</p>
-      </div>
-      <div class="value-row">
-        <span class="vi">ii.</span>
-        <h3>Craft over volume</h3>
-        <p>We take on fewer clients than we could, so the ones we do take on get our full attention. If a detail isn't right, we redo it — even past deadline.</p>
-      </div>
-      <div class="value-row">
-        <span class="vi">iii.</span>
-        <h3>Discerning clients only</h3>
-        <p>You'll work on brands in beauty, hospitality, lifestyle and premium services — the kind of work that ends up in a portfolio you're proud to show.</p>
-      </div>
-      <div class="value-row">
-        <span class="vi">iv.</span>
-        <h3>Built around the work, not the clock</h3>
-        <p>This is a project-based model, not a 9-to-6. You're paid for outcomes and ownership, and you shape your schedule around the deliverable.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="roles">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Open collaborations</span>
-      <h2 class="display">Where we need you right now.</h2>
-      <p>Don't see an exact fit? We still want to hear from you — write in and tell us what you'd bring.</p>
-    </div>
-    <div class="roles-list reveal">
-      <div class="role">
-        <div>
-          <h3>Brand Strategist</h3>
-          <div class="meta"><span class="tag">Strategy</span><span class="tag">Project-based</span></div>
+    <header class="hero">
+      <div class="hero-noise"></div>
+      <div class="hero-orb"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-tags reveal">
+          <span class="hero-tag">New Delhi · Hybrid</span>
+          <span class="hero-tag">Project-based collaborations</span>
+          <span class="hero-tag">Currently accepting applications</span>
         </div>
-        <p>Shape positioning and narrative for luxury clients across beauty, hospitality and lifestyle — from discovery through to brand guidelines.</p>
-        <a href="#apply-form" class="role-apply" data-role="Brand Strategist">Apply <span class="arrow">↗</span></a>
-      </div>
-      <div class="role">
-        <div>
-          <h3>Visual / Brand Designer</h3>
-          <div class="meta"><span class="tag">Design</span><span class="tag">Project-based</span></div>
+        <h1 class="display hero-title reveal">
+          Build brands<br />the future <em>will remember.</em>
+        </h1>
+        <p class="hero-sub reveal">
+          Potli is a small firm of seven, working across strategy, design,
+          technology and business — each project chosen deliberately, each
+          collaborator trusted completely. We're looking for people who'd rather
+          do fewer things exceptionally well.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#roles" class="btn-primary"
+            >See open roles <span class="ico">↓</span></a
+          >
+          <a href="mailto:careers@potli.world" class="link-underline"
+            >Or write to us directly</a
+          >
         </div>
-        <p>Design identity systems, logos and brand guidelines that hold up against the best in the industry — precision matters more than speed here.</p>
-        <a href="#apply-form" class="role-apply" data-role="Visual / Brand Designer">Apply <span class="arrow">↗</span></a>
-      </div>
-      <div class="role">
-        <div>
-          <h3>Brand Copywriter</h3>
-          <div class="meta"><span class="tag">Messaging</span><span class="tag">Project-based</span></div>
-        </div>
-        <p>Develop tone of voice, naming and brand messaging that carries an identity as far as its visuals do.</p>
-        <a href="#apply-form" class="role-apply" data-role="Brand Copywriter">Apply <span class="arrow">↗</span></a>
-      </div>
-      <div class="role">
-        <div>
-          <h3>Front-End / Web Developer</h3>
-          <div class="meta"><span class="tag">Digital</span><span class="tag">Project-based</span></div>
-        </div>
-        <p>Build acquisition-ready websites for our clients — editorial layouts, considered motion, no templated defaults.</p>
-        <a href="#apply-form" class="role-apply" data-role="Front-End / Web Developer">Apply <span class="arrow">↗</span></a>
-      </div>
-      <div class="role">
-        <div>
-          <h3>Sales &amp; Marketing Associate</h3>
-          <div class="meta"><span class="tag">Sales &amp; Marketing</span><span class="tag">Project-based</span></div>
-        </div>
-        <p>Run outreach and campaigns that build Potli's pipeline — from cold outbound to nurturing warm leads into signed clients.</p>
-        <a href="#apply-form" class="role-apply" data-role="Sales &amp; Marketing Associate">Apply <span class="arrow">↗</span></a>
-      </div>
-      <div class="role">
-        <div>
-          <h3>Business Development Associate</h3>
-          <div class="meta"><span class="tag">Business</span><span class="tag">Project-based</span></div>
-        </div>
-        <p>Open doors with prospective clients and help grow Potli's roster of discerning, long-term partnerships.</p>
-        <a href="#apply-form" class="role-apply" data-role="Business Development Associate">Apply <span class="arrow">↗</span></a>
-      </div>
-      <div class="role">
-        <div>
-          <h3>Operations Coordinator</h3>
-          <div class="meta"><span class="tag">Operations</span><span class="tag">Project-based</span></div>
-        </div>
-        <p>Keep every engagement on rails — timelines, deliverables, and the quiet coordination that makes the work look effortless.</p>
-        <a href="#apply-form" class="role-apply" data-role="Operations Coordinator">Apply <span class="arrow">↗</span></a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="apply-form" style="background:var(--cream-deep);">
-  <div class="wrap">
-    <div class="sec-head reveal" style="margin:0 auto 48px; text-align:center;">
-      <span class="eyebrow" style="justify-content:center;">Apply now</span>
-      <h2 class="display">Tell us about you.</h2>
-      <p style="margin-left:auto; margin-right:auto;">Attach your CV or portfolio and we'll route it straight to the right person — no queue, no bot.</p>
-    </div>
-    <div class="form-shell reveal">
-      <form id="applyForm" class="app-form" action="https://formsubmit.co/careers@potli.world" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_subject" value="New career application — Potli site">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="_honey" style="position:absolute; left:-9999px;" tabindex="-1" autocomplete="off">
-        <div class="row2">
-          <div class="field">
-            <label for="app-name">Name</label>
-            <input type="text" id="app-name" name="name" placeholder="Your full name" required>
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <div class="num display">20+</div><div class="lbl">
+              Brands transformed
+            </div>
           </div>
-          <div class="field">
-            <label for="app-email">Email</label>
-            <input type="email" id="app-email" name="email" placeholder="you@email.com" required>
+          <div class="stat">
+            <div class="num display">7</div><div class="lbl">
+              Collaborators on the core team
+            </div>
+          </div>
+          <div class="stat">
+            <div class="num display">7</div><div class="lbl">
+              Disciplines under one roof
+            </div>
           </div>
         </div>
-        <div class="row2">
-          <div class="field">
-            <label for="app-phone">Phone <span class="opt">(optional)</span></label>
-            <input type="tel" id="app-phone" name="phone" placeholder="+91 00000 00000">
+      </div>
+    </header>
+
+    <section id="model">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow">How we work</span>
+          <h2 class="display">A firm, not a headcount.</h2>
+          <p>
+            We don't hire to fill seats. Potli runs as a tight, project-based
+            collaborative — every person owns a discipline outright, and every
+            engagement is chosen because it's worth doing properly.
+          </p>
+        </div>
+        <div
+          class="model-grid reveal"
+          style="grid-template-columns:repeat(3,1fr);"
+        >
+          <div class="model-card">
+            <span class="mk">01 — Strategy</span>
+            <h3>Brand Strategy &amp; Positioning</h3>
+            <p>
+              The narrative and market thinking that sits underneath every
+              decision a brand makes.
+            </p>
           </div>
-          <div class="field">
-            <label for="app-role">Role you're applying for</label>
-            <select id="app-role" name="role" required>
-              <option value="" disabled selected>Choose one</option>
-              <option>Brand Strategist</option>
-              <option>Visual / Brand Designer</option>
-              <option>Brand Copywriter</option>
-              <option>Front-End / Web Developer</option>
-              <option>Sales &amp; Marketing Associate</option>
-              <option>Business Development Associate</option>
-              <option>Operations Coordinator</option>
-              <option>Something else</option>
-            </select>
+          <div class="model-card">
+            <span class="mk">02 — Design</span>
+            <h3>Visual Identity</h3>
+            <p>
+              Logos, systems and the visual language that gives a strategy a
+              shape people recognise.
+            </p>
+          </div>
+          <div class="model-card">
+            <span class="mk">03 — Messaging</span>
+            <h3>Content &amp; Copywriting</h3>
+            <p>
+              Tone of voice, brand messaging and the words that carry an
+              identity beyond its visuals.
+            </p>
+          </div>
+          <div class="model-card">
+            <span class="mk">04 — Digital</span>
+            <h3>Web &amp; Experience</h3>
+            <p>
+              Acquisition-ready websites and digital experiences, built with the
+              same precision as the identity itself.
+            </p>
+          </div>
+          <div class="model-card">
+            <span class="mk">05 — Business</span>
+            <h3>Growth &amp; Client Partnership</h3>
+            <p>
+              Bringing in the right clients and building relationships that
+              outlast a single project.
+            </p>
+          </div>
+          <div class="model-card">
+            <span class="mk">06 — Operations</span>
+            <h3>Delivery &amp; Coordination</h3>
+            <p>
+              Keeping every engagement precise, on time, and worthy of the Potli
+              name.
+            </p>
+          </div>
+          <div class="model-card">
+            <span class="mk">07 — Sales &amp; Marketing</span>
+            <h3>Campaigns &amp; Outreach</h3>
+            <p>
+              Campaigns, outreach and the pipeline work that turns interest into
+              signed, well-fit clients.
+            </p>
           </div>
         </div>
-        <div class="field">
-          <label for="app-portfolio">Portfolio / LinkedIn <span class="opt">(optional)</span></label>
-          <input type="url" id="app-portfolio" name="portfolio" placeholder="Link to your work or profile">
-        </div>
-        <div class="field">
-          <label for="app-message">A line about what you'd bring</label>
-          <textarea id="app-message" name="message" placeholder="What you've worked on, and why this role fits." required></textarea>
-        </div>
-        <div class="field">
-          <label for="app-resume">Resume / CV</label>
-          <label class="file-drop" for="app-resume">
-            <span class="fname" id="fileLabel">Click to upload — PDF or DOCX, up to 5MB</span>
-            <span aria-hidden="true">↑</span>
-          </label>
-          <input type="file" id="app-resume" name="resume" accept=".pdf,.doc,.docx" required>
-        </div>
-        <div class="submit-row">
-          <button type="submit" class="btn-primary">
-            <span class="btn-label">Submit application</span>
-            <span class="ico">↗</span>
-          </button>
-          <span class="form-note">We read every application ourselves — no forms disappear into a queue.</span>
-        </div>
-        <div class="status-msg" id="appSuccess">
-          <span class="dot"></span>
-          <span>Got it — we'll write back within two working days.</span>
-        </div>
-        <div class="status-msg error" id="appError">
-          <span class="dot"></span>
-          <span>Something went wrong sending that. Please email your CV directly to <a href="mailto:careers@potli.world" style="text-decoration:underline;">careers@potli.world</a>.</span>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
-<section id="process">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">How you'd join us</span>
-      <h2 class="display">Three steps. No black box.</h2>
-      <p>No lengthy panel rounds or take-home busywork you'll never hear back on. We keep it short, honest, and mutual.</p>
-    </div>
-    <div class="model-grid reveal" style="grid-template-columns:repeat(3,1fr);">
-      <div class="model-card">
-        <span class="mk">01 — Apply</span>
-        <h3>Send your work</h3>
-        <p>Fill out the application above with your portfolio and a line on what you'd want to own here. No cover letter template needed — just show us the work.</p>
+    <section id="values" style="background:var(--cream-deep);">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow">Life inside Potli</span>
+          <h2 class="display">What it actually feels like to work here.</h2>
+        </div>
+        <div class="values-list reveal">
+          <div class="value-row">
+            <span class="vi">i.</span>
+            <h3>Ownership over instruction</h3>
+            <p>
+              There's no bench. Every collaborator leads their discipline
+              end-to-end — you'll be trusted with real client relationships, not
+              tucked behind a senior's sign-off.
+            </p>
+          </div>
+          <div class="value-row">
+            <span class="vi">ii.</span>
+            <h3>Craft over volume</h3>
+            <p>
+              We take on fewer clients than we could, so the ones we do take on
+              get our full attention. If a detail isn't right, we redo it — even
+              past deadline.
+            </p>
+          </div>
+          <div class="value-row">
+            <span class="vi">iii.</span>
+            <h3>Discerning clients only</h3>
+            <p>
+              You'll work on brands in beauty, hospitality, lifestyle and
+              premium services — the kind of work that ends up in a portfolio
+              you're proud to show.
+            </p>
+          </div>
+          <div class="value-row">
+            <span class="vi">iv.</span>
+            <h3>Built around the work, not the clock</h3>
+            <p>
+              This is a project-based model, not a 9-to-6. You're paid for
+              outcomes and ownership, and you shape your schedule around the
+              deliverable.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="model-card">
-        <span class="mk">02 — Talk it through</span>
-        <h3>A short call</h3>
-        <p>30 minutes with Rushan or the relevant lead, to understand how you think and whether the fit is real on both sides.</p>
-      </div>
-      <div class="model-card">
-        <span class="mk">03 — Trial project</span>
-        <h3>Work together, paid</h3>
-        <p>A small, compensated project close to real client work. If it clicks, you're on the roster for what comes next.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="perks">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Why Potli</span>
-      <h2 class="display">Beyond the project itself.</h2>
-    </div>
-    <div class="perks-grid reveal">
-      <div class="perk">
-        <span class="pnum">01</span>
-        <h3>Direct client exposure</h3>
-        <p>No layers between you and the client. You present the work, you own the relationship.</p>
+    <section id="roles">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow">Open collaborations</span>
+          <h2 class="display">Where we need you right now.</h2>
+          <p>
+            Don't see an exact fit? We still want to hear from you — write in
+            and tell us what you'd bring.
+          </p>
+        </div>
+        <div class="roles-list reveal">
+          <div class="role">
+            <div>
+              <h3>Product Manager</h3>
+              <div class="meta">
+                <span class="tag">Strategy</span><span class="tag"
+                  >Project-based</span>
+              </div>
+            </div>
+            <p>
+              Shape product strategy and user experiences across discovery,
+              development and launch — turning customer needs into clear,
+              impactful products.
+            </p>
+            <a
+              href="#apply-form"
+              class="role-apply"
+              data-role="Brand Strategist">Apply <span class="arrow">↗</span></a
+            >
+          </div>
+          <div class="role">
+            <div>
+              <h3>Brand Strategist</h3>
+              <div class="meta">
+                <span class="tag">Strategy</span><span class="tag"
+                  >Project-based</span>
+              </div>
+            </div>
+            <p>
+              Shape positioning and narrative for luxury clients across beauty,
+              hospitality and lifestyle — from discovery through to brand
+              guidelines.
+            </p>
+            <a
+              href="#apply-form"
+              class="role-apply"
+              data-role="Brand Strategist">Apply <span class="arrow">↗</span></a
+            >
+          </div>
+          <div class="role">
+            <div>
+              <h3>Visual / Brand Designer</h3>
+              <div class="meta">
+                <span class="tag">Design</span><span class="tag"
+                  >Project-based</span>
+              </div>
+            </div>
+            <p>
+              Design identity systems, logos and brand guidelines that hold up
+              against the best in the industry — precision matters more than
+              speed here.
+            </p>
+            <a
+              href="#apply-form"
+              class="role-apply"
+              data-role="Visual / Brand Designer"
+              >Apply <span class="arrow">↗</span></a
+            >
+          </div>
+          <div class="role">
+            <div>
+              <h3>Brand Copywriter</h3>
+              <div class="meta">
+                <span class="tag">Messaging</span><span class="tag"
+                  >Project-based</span>
+              </div>
+            </div>
+            <p>
+              Develop tone of voice, naming and brand messaging that carries an
+              identity as far as its visuals do.
+            </p>
+            <a
+              href="#apply-form"
+              class="role-apply"
+              data-role="Brand Copywriter">Apply <span class="arrow">↗</span></a
+            >
+          </div>
+          <div class="role">
+            <div>
+              <h3>Front-End / Web Developer</h3>
+              <div class="meta">
+                <span class="tag">Digital</span><span class="tag"
+                  >Project-based</span>
+              </div>
+            </div>
+            <p>
+              Build acquisition-ready websites for our clients — editorial
+              layouts, considered motion, no templated defaults.
+            </p>
+            <a
+              href="#apply-form"
+              class="role-apply"
+              data-role="Front-End / Web Developer"
+              >Apply <span class="arrow">↗</span></a
+            >
+          </div>
+          <div class="role">
+            <div>
+              <h3>Sales &amp; Marketing Associate</h3>
+              <div class="meta">
+                <span class="tag">Sales &amp; Marketing</span><span class="tag"
+                  >Project-based</span>
+              </div>
+            </div>
+            <p>
+              Run outreach and campaigns that build Potli's pipeline — from cold
+              outbound to nurturing warm leads into signed clients.
+            </p>
+            <a
+              href="#apply-form"
+              class="role-apply"
+              data-role="Sales & Marketing Associate"
+              >Apply <span class="arrow">↗</span></a
+            >
+          </div>
+          <div class="role">
+            <div>
+              <h3>Business Development Associate</h3>
+              <div class="meta">
+                <span class="tag">Business</span><span class="tag"
+                  >Project-based</span>
+              </div>
+            </div>
+            <p>
+              Open doors with prospective clients and help grow Potli's roster
+              of discerning, long-term partnerships.
+            </p>
+            <a
+              href="#apply-form"
+              class="role-apply"
+              data-role="Business Development Associate"
+              >Apply <span class="arrow">↗</span></a
+            >
+          </div>
+          <div class="role">
+            <div>
+              <h3>Operations Coordinator</h3>
+              <div class="meta">
+                <span class="tag">Operations</span><span class="tag"
+                  >Project-based</span>
+              </div>
+            </div>
+            <p>
+              Keep every engagement on rails — timelines, deliverables, and the
+              quiet coordination that makes the work look effortless.
+            </p>
+            <a
+              href="#apply-form"
+              class="role-apply"
+              data-role="Operations Coordinator"
+              >Apply <span class="arrow">↗</span></a
+            >
+          </div>
+        </div>
       </div>
-      <div class="perk">
-        <span class="pnum">02</span>
-        <h3>Portfolio-grade work</h3>
-        <p>Every engagement is chosen for craft. What you ship here is what you'll want to show next.</p>
-      </div>
-      <div class="perk">
-        <span class="pnum">03</span>
-        <h3>Full creative latitude</h3>
-        <p>Bring your point of view. We hire for taste and judgment, then get out of the way.</p>
-      </div>
-      <div class="perk">
-        <span class="pnum">04</span>
-        <h3>Flexible, remote-friendly</h3>
-        <p>Work from wherever you do your best thinking. We care about the outcome, not the seat.</p>
-      </div>
-      <div class="perk">
-        <span class="pnum">05</span>
-        <h3>A tight, opinionated team</h3>
-        <p>Seven people, no bureaucracy. Decisions happen in a conversation, not a committee.</p>
-      </div>
-      <div class="perk">
-        <span class="pnum">06</span>
-        <h3>Room to grow with us</h3>
-        <p>As Potli takes on more clients, collaborators who prove themselves take on more ownership.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="faq" style="background:var(--cream-deep);">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Before you write in</span>
-      <h2 class="display">Frequently asked questions.</h2>
-    </div>
-    <div class="reveal" style="max-width:760px;">
-      <div class="faq-item open">
-        <div class="faq-q"><h4>Is this a salaried role?</h4><span class="faq-plus">+</span></div>
-        <div class="faq-a"><p>No — Potli runs on a project-based collaborative model. You're compensated per engagement rather than on a fixed salary, with the potential for ongoing, repeat collaboration as trust builds.</p></div>
+    <section id="apply-form" style="background:var(--cream-deep);">
+      <div class="wrap">
+        <div
+          class="sec-head reveal"
+          style="margin:0 auto 48px; text-align:center;"
+        >
+          <span class="eyebrow" style="justify-content:center;">Apply now</span>
+          <h2 class="display">Tell us about you.</h2>
+          <p style="margin-left:auto; margin-right:auto;">
+            Attach your CV or portfolio and we'll route it straight to the right
+            person — no queue, no bot.
+          </p>
+        </div>
+        <div class="form-shell reveal">
+          <form
+            id="applyForm"
+            class="app-form"
+            action="https://formsubmit.co/careers@potli.world"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New career application — Potli site"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="text"
+              name="_honey"
+              style="position:absolute; left:-9999px;"
+              tabindex="-1"
+              autocomplete="off"
+            />
+            <div class="row2">
+              <div class="field">
+                <label for="app-name">Name</label>
+                <input
+                  type="text"
+                  id="app-name"
+                  name="name"
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="app-email">Email</label>
+                <input
+                  type="email"
+                  id="app-email"
+                  name="email"
+                  placeholder="you@email.com"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row2">
+              <div class="field">
+                <label for="app-phone"
+                  >Phone <span class="opt">(optional)</span></label
+                >
+                <input
+                  type="tel"
+                  id="app-phone"
+                  name="phone"
+                  placeholder="+91 00000 00000"
+                />
+              </div>
+              <div class="field">
+                <label for="app-role">Role you're applying for</label>
+                <select id="app-role" name="role" required>
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Product Manager</option>
+                  <option>Brand Strategist</option>
+                  <option>Visual / Brand Designer</option>
+                  <option>Brand Copywriter</option>
+                  <option>Front-End / Web Developer</option>
+                  <option>Sales &amp; Marketing Associate</option>
+                  <option>Business Development Associate</option>
+                  <option>Operations Coordinator</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="app-portfolio"
+                >Portfolio / LinkedIn <span class="opt">(optional)</span></label
+              >
+              <input
+                type="url"
+                id="app-portfolio"
+                name="portfolio"
+                placeholder="Link to your work or profile"
+              />
+            </div>
+            <div class="field">
+              <label for="app-message">A line about what you'd bring</label>
+              <textarea
+                id="app-message"
+                name="message"
+                placeholder="What you've worked on, and why this role fits."
+                required></textarea>
+            </div>
+            <div class="field">
+              <label for="app-resume">Resume / CV</label>
+              <label class="file-drop" for="app-resume">
+                <span class="fname" id="fileLabel"
+                  >Click to upload — PDF or DOCX, up to 5MB</span
+                >
+                <span aria-hidden="true">↑</span>
+              </label>
+              <input
+                type="file"
+                id="app-resume"
+                name="resume"
+                accept=".pdf,.doc,.docx"
+                required
+              />
+            </div>
+            <div class="submit-row">
+              <button type="submit" class="btn-primary">
+                <span class="btn-label">Submit application</span>
+                <span class="ico">↗</span>
+              </button>
+              <span class="form-note"
+                >We read every application ourselves — no forms disappear into a
+                queue.</span
+              >
+            </div>
+            <div class="status-msg" id="appSuccess">
+              <span class="dot"></span>
+              <span>Got it — we'll write back within two working days.</span>
+            </div>
+            <div class="status-msg error" id="appError">
+              <span class="dot"></span>
+              <span
+                >Something went wrong sending that. Please email your CV
+                directly to <a
+                  href="mailto:careers@potli.world"
+                  style="text-decoration:underline;">careers@potli.world</a
+                >.</span
+              >
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="faq-item">
-        <div class="faq-q"><h4>Do I need to be based in New Delhi?</h4><span class="faq-plus">+</span></div>
-        <div class="faq-a"><p>It helps for the strategy and client-facing roles, but most technical and design work happens remotely. We'll be upfront about what each role needs.</p></div>
+    </section>
+
+    <section id="process">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow">How you'd join us</span>
+          <h2 class="display">Three steps. No black box.</h2>
+          <p>
+            No lengthy panel rounds or take-home busywork you'll never hear back
+            on. We keep it short, honest, and mutual.
+          </p>
+        </div>
+        <div
+          class="model-grid reveal"
+          style="grid-template-columns:repeat(3,1fr);"
+        >
+          <div class="model-card">
+            <span class="mk">01 — Apply</span>
+            <h3>Send your work</h3>
+            <p>
+              Fill out the application above with your portfolio and a line on
+              what you'd want to own here. No cover letter template needed —
+              just show us the work.
+            </p>
+          </div>
+          <div class="model-card">
+            <span class="mk">02 — Talk it through</span>
+            <h3>A short call</h3>
+            <p>
+              30 minutes with Rushan or the relevant lead, to understand how you
+              think and whether the fit is real on both sides.
+            </p>
+          </div>
+          <div class="model-card">
+            <span class="mk">03 — Trial project</span>
+            <h3>Work together, paid</h3>
+            <p>
+              A small, compensated project close to real client work. If it
+              clicks, you're on the roster for what comes next.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="faq-item">
-        <div class="faq-q"><h4>What's the interview process like?</h4><span class="faq-plus">+</span></div>
-        <div class="faq-a"><p>A short call to understand your work and how you think, followed by a small paid trial project so we both know it's a fit before committing further.</p></div>
+    </section>
+
+    <section id="perks">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow">Why Potli</span>
+          <h2 class="display">Beyond the project itself.</h2>
+        </div>
+        <div class="perks-grid reveal">
+          <div class="perk">
+            <span class="pnum">01</span>
+            <h3>Direct client exposure</h3>
+            <p>
+              No layers between you and the client. You present the work, you
+              own the relationship.
+            </p>
+          </div>
+          <div class="perk">
+            <span class="pnum">02</span>
+            <h3>Portfolio-grade work</h3>
+            <p>
+              Every engagement is chosen for craft. What you ship here is what
+              you'll want to show next.
+            </p>
+          </div>
+          <div class="perk">
+            <span class="pnum">03</span>
+            <h3>Full creative latitude</h3>
+            <p>
+              Bring your point of view. We hire for taste and judgment, then get
+              out of the way.
+            </p>
+          </div>
+          <div class="perk">
+            <span class="pnum">04</span>
+            <h3>Flexible, remote-friendly</h3>
+            <p>
+              Work from wherever you do your best thinking. We care about the
+              outcome, not the seat.
+            </p>
+          </div>
+          <div class="perk">
+            <span class="pnum">05</span>
+            <h3>A tight, opinionated team</h3>
+            <p>
+              Seven people, no bureaucracy. Decisions happen in a conversation,
+              not a committee.
+            </p>
+          </div>
+          <div class="perk">
+            <span class="pnum">06</span>
+            <h3>Room to grow with us</h3>
+            <p>
+              As Potli takes on more clients, collaborators who prove themselves
+              take on more ownership.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="faq-item">
-        <div class="faq-q"><h4>I don't see a role that fits — should I still apply?</h4><span class="faq-plus">+</span></div>
-        <div class="faq-a"><p>Yes. Write to us with examples of your work and where you think you'd add value. We'd rather meet good people early than miss them because a title didn't line up.</p></div>
+    </section>
+
+    <section id="faq" style="background:var(--cream-deep);">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow">Before you write in</span>
+          <h2 class="display">Frequently asked questions.</h2>
+        </div>
+        <div class="reveal" style="max-width:760px;">
+          <div class="faq-item open">
+            <div class="faq-q">
+              <h4>Is this a salaried role?</h4><span class="faq-plus">+</span>
+            </div>
+            <div class="faq-a">
+              <p>
+                No — Potli runs on a project-based collaborative model. You're
+                compensated per engagement rather than on a fixed salary, with
+                the potential for ongoing, repeat collaboration as trust builds.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              <h4>Do I need to be based in New Delhi?</h4><span class="faq-plus"
+                >+</span>
+            </div>
+            <div class="faq-a">
+              <p>
+                It helps for the strategy and client-facing roles, but most
+                technical and design work happens remotely. We'll be upfront
+                about what each role needs.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              <h4>What's the interview process like?</h4><span class="faq-plus"
+                >+</span>
+            </div>
+            <div class="faq-a">
+              <p>
+                A short call to understand your work and how you think, followed
+                by a small paid trial project so we both know it's a fit before
+                committing further.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              <h4>I don't see a role that fits — should I still apply?</h4><span
+                class="faq-plus">+</span>
+            </div>
+            <div class="faq-a">
+              <p>
+                Yes. Write to us with examples of your work and where you think
+                you'd add value. We'd rather meet good people early than miss
+                them because a title didn't line up.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- footer custom -->
-<section class="hero z-20 relative h-[100vh] w-full bg-[#C7A697] md:bg-[#BEAB9A] overflow-hidden text-[#111] !p-0">
-   <div class="absolute inset-x-0 top-[50%] -translate-y-[50.5%] w-full">
-    <div class="h-[20rem]"></div>
-      <video autoplay loop muted playsinline class="md:block hidden w-full h-auto max-h-[110vh] object-contain pb-4 [transform:translateZ(0)] blur-[0.4px]">
-        <source src="/assets/footer.mp4" type="video/mp4" class="h-full w-full" />
+    </section>
+    <!-- footer custom -->
+    <section
+      class="hero z-20 relative h-[100vh] w-full bg-[#C7A697] md:bg-[#BEAB9A] overflow-hidden text-[#111] !p-0"
+    >
+      <div class="absolute inset-x-0 top-[50%] -translate-y-[50.5%] w-full">
+        <div class="h-[20rem]"></div>
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="md:block hidden w-full h-auto max-h-[110vh] object-contain pb-4 [transform:translateZ(0)] blur-[0.4px]"
+        >
+          <source
+            src="/assets/footer.mp4"
+            type="video/mp4"
+            class="h-full w-full"
+          />
           Your browser does not support the video tag.
         </video>
-</div>
-    <!-- <video autoplay loop muted playsinline class="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-1/2 object-cover !p-0">
+      </div>
+      <!-- <video autoplay loop muted playsinline class="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-1/2 object-cover !p-0">
     <source src="/assets/footer.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video> -->
 
-  <div class="relative z-20 flex flex-col justify-between h-full !px-8 !pt-0 !pb-8">
-    <div class="text-center items-center flex flex-col mt-13!">
-      <h2 class="text-5xl md:text-6xl font-medium tracking-tight font-sans">
-        Create a brand that <br />
-        stands the test of <span class="text-[#574F48]">time.</span>
-      </h2>
-      <p class="my-4! text-[#333] text-lg font-sans">
-        Potli designs. Lasting impressions. Let's craft a brand that endures and inspires.
-      </p>
-      <a href="#apply-form" class="group rounded-full relative z-50 bg-[#EFEAE5] transition-all duration-200 ease-in-out hover:bg-[#e7e1db] font-semibold font-sans w-fit flex items-center"><p class="px-6! py-3.5! ">Send your portfolio</p> <span class="rounded-full bg-white p-3! mr-1!"><ArrowRight color="#000000" size={"20px"}!/></span>
-    <div class="bg-white w-12 h-12 -z-10  group-hover:w-[calc(100%-0.5rem)] group-hover:h-[calc(100%-0.5rem)] transition-[width,height] duration-700 ease-in-out flex absolute rounded-full right-1 top-1/2 -translate-y-1/2 will-change-[width,height]"></div>
-  </a>
-  <!-- not required in career page <p style="margin-top:26px; font-size:16.5px; color:#574F48;">Want to build the next landmark chapter? <a href="career" style="color:#000000; border-bottom:1px solid rgb(0, 0, 0);">We're hiring →</a></p> -->
-    </div>
-     <!-- Footer -->
-    <div class=" flex items-center justify-between pt-6 text-sm font-sans">
+      <div
+        class="relative z-20 flex flex-col justify-between h-full !px-8 !pt-0 !pb-8"
+      >
+        <div class="text-center items-center flex flex-col mt-13!">
+          <h2 class="text-5xl md:text-6xl font-medium tracking-tight font-sans">
+            Create a brand that <br />
+            stands the test of <span class="text-[#574F48]">time.</span>
+          </h2>
+          <p class="my-4! text-[#333] text-lg font-sans">
+            Potli designs. Lasting impressions. Let's craft a brand that endures
+            and inspires.
+          </p>
+          <a
+            href="#apply-form"
+            class="group rounded-full relative z-50 bg-[#EFEAE5] transition-all duration-200 ease-in-out hover:bg-[#e7e1db] font-semibold font-sans w-fit flex items-center"
+            ><p class="px-6! py-3.5!">Send your portfolio</p>
+            <span class="rounded-full bg-white p-3! mr-1!"
+              ><ArrowRight color="#000000" size={"20px"} ! /></span
+            >
+            <div
+              class="bg-white w-12 h-12 -z-10 group-hover:w-[calc(100%-0.5rem)] group-hover:h-[calc(100%-0.5rem)] transition-[width,height] duration-700 ease-in-out flex absolute rounded-full right-1 top-1/2 -translate-y-1/2 will-change-[width,height]"
+            >
+            </div>
+          </a>
+          <!-- not required in career page <p style="margin-top:26px; font-size:16.5px; color:#574F48;">Want to build the next landmark chapter? <a href="career" style="color:#000000; border-bottom:1px solid rgb(0, 0, 0);">We're hiring →</a></p> -->
+        </div>
+        <!-- Footer -->
+        <div class="flex items-center justify-between pt-6 text-sm font-sans">
+          <span> © 2026 Potli. We fill it with meaning. </span>
 
-      <span>
-        © 2026 Potli. We fill it with meaning.
-      </span>
-
-      <div class="hidden md:flex gap-8">
-        <a href="/" class="hover:text-[#574F48]">Home</a>
-        <a href="/about-us" class="hover:text-[#574F48]">About</a>
-        <a href="/awards" class="hover:text-[#574F48]">Awards</a>
-        <a href="/career" class="hover:text-[#574F48]">Career</a>
-        <a href="/contact" class="hover:text-[#574F48]">Contact</a>
+          <div class="hidden md:flex gap-8">
+            <a href="/" class="hover:text-[#574F48]">Home</a>
+            <a href="/about-us" class="hover:text-[#574F48]">About</a>
+            <a href="/awards" class="hover:text-[#574F48]">Awards</a>
+            <a href="/career" class="hover:text-[#574F48]">Career</a>
+            <a href="/contact" class="hover:text-[#574F48]">Contact</a>
+          </div>
+        </div>
       </div>
+      <div
+        class="block md:hidden absolute z-10 bottom-0 left-0 right-0 h-[34vh] pointer-events-none overflow-hidden"
+      >
+        <div
+          class="absolute top-0 left-0 right-0 z-20 h-10 bg-gradient-to-b from-[#C7A697]/95 via-[#C7A697]/70 to-transparent backdrop-blur-sm"
+        >
+        </div>
+        <video
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[18%] rotate-90 h-[450px] w-auto max-w-none bg-[#C7A697] md:bg-[#BEAB9A]"
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src="/assets/bg.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+    <script is:inline>
+      // scroll reveal
+      const els = document.querySelectorAll(".reveal");
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
+      );
+      els.forEach((el) => io.observe(el));
 
-     </div>
-  </div>
-  <div class="block md:hidden absolute z-10 bottom-0 left-0 right-0 h-[34vh] pointer-events-none overflow-hidden">
-  <div class="absolute top-0 left-0 right-0 z-20 h-10 bg-gradient-to-b from-[#C7A697]/95 via-[#C7A697]/70 to-transparent backdrop-blur-sm"></div>
-  <video class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[18%] rotate-90 h-[450px] w-auto max-w-none bg-[#C7A697] md:bg-[#BEAB9A]" autoplay loop muted playsinline>
-    <source src="/assets/bg.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
-</section>
-<script is:inline>
-  // scroll reveal
-  const els = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
-  els.forEach(el=>io.observe(el));
-
-  // faq accordion
-  document.querySelectorAll('.faq-item').forEach(item=>{
-    const q = item.querySelector('.faq-q');
-    q.setAttribute('tabindex','0');
-    q.setAttribute('role','button');
-    const toggle = ()=>{
-      const willOpen = !item.classList.contains('open');
-      item.parentElement.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-      if(willOpen) item.classList.add('open');
-    };
-    q.addEventListener('click', toggle);
-    q.addEventListener('keydown', (e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } });
-  });
-
-  // nav shadow on scroll
-  const pill = document.querySelector('.nav-pill');
-  window.addEventListener('scroll', ()=>{
-    pill.style.boxShadow = window.scrollY > 40
-      ? '0 14px 34px -12px rgba(34,30,26,0.28)'
-      : '0 10px 30px -12px rgba(34,30,26,0.18)';
-  });
-
-  // "Apply" links: scroll to the form and pre-select the matching role
-  const roleSelect = document.getElementById('app-role');
-  document.querySelectorAll('.role-apply[data-role]').forEach(link=>{
-    link.addEventListener('click', ()=>{
-      if (roleSelect) {
-        const wanted = link.getAttribute('data-role');
-        const match = Array.from(roleSelect.options).find(o => o.value === wanted);
-        if (match) roleSelect.value = wanted;
-      }
-      window.setTimeout(()=>{ document.getElementById('app-name')?.focus({preventScroll:true}); }, 500);
-    });
-  });
-
-  // resume file name preview
-  const resumeInput = document.getElementById('app-resume');
-  const fileLabel = document.getElementById('fileLabel');
-  if (resumeInput && fileLabel) {
-    resumeInput.addEventListener('change', ()=>{
-      fileLabel.textContent = resumeInput.files[0] ? resumeInput.files[0].name : 'Click to upload — PDF or DOCX, up to 5MB';
-    });
-  }
-
-  // application form submit
-  const appForm = document.getElementById('applyForm');
-  if (appForm) {
-    const appSuccess = document.getElementById('appSuccess');
-    const appError = document.getElementById('appError');
-    const appSubmitBtn = appForm.querySelector('.btn-primary');
-    const appSubmitLabel = appSubmitBtn.querySelector('.btn-label');
-
-    appForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      appSuccess.classList.remove('show');
-      appError.classList.remove('show');
-      appSubmitBtn.setAttribute('disabled', 'true');
-      appSubmitLabel.textContent = 'Sending…';
-
-      const ajaxUrl = appForm.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
-
-      fetch(ajaxUrl, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(appForm)
-      })
-        .then((res) => {
-          if (!res.ok) throw new Error('Request failed');
-          appSuccess.classList.add('show');
-          appForm.reset();
-          fileLabel.textContent = 'Click to upload — PDF or DOCX, up to 5MB';
-        })
-        .catch(() => {
-          appError.classList.add('show');
-        })
-        .finally(() => {
-          appSubmitBtn.removeAttribute('disabled');
-          appSubmitLabel.textContent = 'Submit application';
+      // faq accordion
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        const q = item.querySelector(".faq-q");
+        q.setAttribute("tabindex", "0");
+        q.setAttribute("role", "button");
+        const toggle = () => {
+          const willOpen = !item.classList.contains("open");
+          item.parentElement
+            .querySelectorAll(".faq-item")
+            .forEach((i) => i.classList.remove("open"));
+          if (willOpen) item.classList.add("open");
+        };
+        q.addEventListener("click", toggle);
+        q.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggle();
+          }
         });
-    });
-  }
+      });
 
-</script>
+      // nav shadow on scroll
+      const pill = document.querySelector(".nav-pill");
+      window.addEventListener("scroll", () => {
+        pill.style.boxShadow =
+          window.scrollY > 40
+            ? "0 14px 34px -12px rgba(34,30,26,0.28)"
+            : "0 10px 30px -12px rgba(34,30,26,0.18)";
+      });
 
-<script>
-  import { gsap } from "gsap";
+      // "Apply" links: scroll to the form and pre-select the matching role
+      const roleSelect = document.getElementById("app-role");
+      document.querySelectorAll(".role-apply[data-role]").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (roleSelect) {
+            const wanted = link.getAttribute("data-role");
+            const match = Array.from(roleSelect.options).find(
+              (o) => o.value === wanted,
+            );
+            if (match) roleSelect.value = wanted;
+          }
+          window.setTimeout(() => {
+            document.getElementById("app-name")?.focus({ preventScroll: true });
+          }, 500);
+        });
+      });
 
-  const mouseFollower = document.getElementById("mouse-follower");
-  if (mouseFollower) {
-    gsap.set(mouseFollower, { xPercent: -50, yPercent: -50 });
+      // resume file name preview
+      const resumeInput = document.getElementById("app-resume");
+      const fileLabel = document.getElementById("fileLabel");
+      if (resumeInput && fileLabel) {
+        resumeInput.addEventListener("change", () => {
+          fileLabel.textContent = resumeInput.files[0]
+            ? resumeInput.files[0].name
+            : "Click to upload — PDF or DOCX, up to 5MB";
+        });
+      }
 
-    const xTo = gsap.quickTo(mouseFollower, "x", { duration: 0.6, ease: "power3" });
-    const yTo = gsap.quickTo(mouseFollower, "y", { duration: 0.6, ease: "power3" });
+      // application form submit
+      const appForm = document.getElementById("applyForm");
+      if (appForm) {
+        const appSuccess = document.getElementById("appSuccess");
+        const appError = document.getElementById("appError");
+        const appSubmitBtn = appForm.querySelector(".btn-primary");
+        const appSubmitLabel = appSubmitBtn.querySelector(".btn-label");
 
-    window.addEventListener("mousemove", (e) => {
-      xTo(e.clientX);
-      yTo(e.clientY);
-    });
-  }
-</script>
+        appForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          appSuccess.classList.remove("show");
+          appError.classList.remove("show");
+          appSubmitBtn.setAttribute("disabled", "true");
+          appSubmitLabel.textContent = "Sending…";
 
-</body>
+          const ajaxUrl = appForm.action.replace(
+            "formsubmit.co/",
+            "formsubmit.co/ajax/",
+          );
+
+          fetch(ajaxUrl, {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: new FormData(appForm),
+          })
+            .then((res) => {
+              if (!res.ok) throw new Error("Request failed");
+              appSuccess.classList.add("show");
+              appForm.reset();
+              fileLabel.textContent =
+                "Click to upload — PDF or DOCX, up to 5MB";
+            })
+            .catch(() => {
+              appError.classList.add("show");
+            })
+            .finally(() => {
+              appSubmitBtn.removeAttribute("disabled");
+              appSubmitLabel.textContent = "Submit application";
+            });
+        });
+      }
+    </script>
+
+    <script>
+      import { gsap } from "gsap";
+
+      const mouseFollower = document.getElementById("mouse-follower");
+      if (mouseFollower) {
+        gsap.set(mouseFollower, { xPercent: -50, yPercent: -50 });
+
+        const xTo = gsap.quickTo(mouseFollower, "x", {
+          duration: 0.6,
+          ease: "power3",
+        });
+        const yTo = gsap.quickTo(mouseFollower, "y", {
+          duration: 0.6,
+          ease: "power3",
+        });
+
+        window.addEventListener("mousemove", (e) => {
+          xTo(e.clientX);
+          yTo(e.clientY);
+        });
+      }
+    </script>
+  </body>
 </html>
